@@ -1,0 +1,32 @@
+
+routes = Rotas
+Responsavel por conter as rotas do nosso back end
+
+controller = controladora
+Responsavel por conter as funções que serão executadas quando uma rota for chamada
+e também por "controlar" o fluxo do nosso back end.
+
+services = serviços
+Responsável por conter funções com as regras de negócio do nosso sistema.
+É comum encontrar nesse arquivo funções que chamem o banco de dados
+e façam a manipulação dos dados.
+
+Dada a rota ficticia que se encontra no arquivo "user.routes" construa as seguintes funcionalidades :
+
+1 - Criar um usuário (somente logar a mensagem que se encontra em create() no arquivo mysql.js) (feitoX)
+2 - Listar todos os usuários (feitoX)
+3 - Listar um usuário pelo id(feitoX)
+4 - Listar um usuário pelo nome (feito)
+5 - Listar um usuário pelo email 
+
+
+# server.js cria a função que chama a rota.
+# user.routes cria a função que chama a controller.
+# controller cria a função que chama a service e responde para a rota se deu certo ou errado o que veio da service. 
+# service cria a função que chama o banco de dados e processa alguma regra especifica para devolver a controller.
+
+server.js -> user.routes.js -> user.controller.js -> user.service.js -> mysql.js
+
+Se fosse em apenas um arquivo teriamos o seguinte fluxo:
+
+index.js
